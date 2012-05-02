@@ -7,7 +7,6 @@
   }
 })(this, function(_) {
   var sortedGroupBy;
-  define(['underscore'], function(_) {});
   sortedGroupBy = function(list, groupBy, sortBy) {
     var groupByIter, groups, sortByIter;
     if (_.isArray(groupBy)) {

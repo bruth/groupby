@@ -4,8 +4,6 @@
     else
         root.GroupBy = factory root._
 ) @, (_) ->
-    define ['underscore'], (_) ->
-
     sortedGroupBy = (list, groupBy, sortBy) ->
         if _.isArray(groupBy)
             groupByIter = (obj) ->
