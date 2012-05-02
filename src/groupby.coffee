@@ -17,7 +17,7 @@
         else
             sortByIter = sortBy
 
-        groups = _.groupBy(list, groupBy)
+        groups = _.groupBy list, groupByIter
 
         if sortByIter
             _.each groups, (value, key, list) ->
