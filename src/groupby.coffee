@@ -2,7 +2,7 @@
     if typeof define is 'function' and define.amd
         define ['underscore'], factory
     else
-        root.GroupBy = factory root._
+        root.grouper = factory root._
 ) @, (_) ->
     sortedGroupBy = (list, groupBy, sortBy) ->
         if _.isArray(groupBy)

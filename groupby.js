@@ -3,7 +3,7 @@
   if (typeof define === 'function' && define.amd) {
     return define(['underscore'], factory);
   } else {
-    return root.GroupBy = factory(root._);
+    return root.grouper = factory(root._);
   }
 })(this, function(_) {
   var sortedGroupBy;
