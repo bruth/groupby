@@ -1,4 +1,10 @@
-define ['underscore'], (_) ->
+((root, factory) ->
+    if typeof define is 'function' and define.amd
+        define ['underscore'], factory
+    else
+        root.GroupBy = factory root._
+) @, (_) ->
+    define ['underscore'], (_) ->
 
     sortedGroupBy = (list, groupBy, sortBy) ->
         if _.isArray(groupBy)

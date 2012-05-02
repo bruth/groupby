@@ -1,6 +1,13 @@
 
-define(['underscore'], function(_) {
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    return define(['underscore'], factory);
+  } else {
+    return root.GroupBy = factory(root._);
+  }
+})(this, function(_) {
   var sortedGroupBy;
+  define(['underscore'], function(_) {});
   sortedGroupBy = function(list, groupBy, sortBy) {
     var groupByIter, groups, sortByIter;
     if (_.isArray(groupBy)) {
